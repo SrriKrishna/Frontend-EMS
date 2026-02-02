@@ -1,0 +1,208 @@
+/* === Layout === */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+/* === Navbar === */
+.navbar-custom {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-md);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.8rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand-custom {
+  font-weight: 700;
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  letter-spacing: -0.5px;
+}
+
+/* === Cards === */
+.card-custom {
+  border: none;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* === Buttons === */
+.btn-custom {
+  border-radius: 50px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary-custom {
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-hover));
+  color: white;
+}
+
+.btn-primary-custom:hover {
+  background: linear-gradient(45deg, var(--primary-hover), var(--primary-color));
+  /* Reverse gradient on hover */
+  transform: translateY(-2px);
+  color: white;
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.btn-secondary-custom {
+  background: #fff;
+  color: var(--text-main);
+  border: 1px solid #e0e0e0;
+}
+
+.btn-secondary-custom:hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+}
+
+.btn-action-edit {
+  background: linear-gradient(135deg, var(--info-color), var(--primary-color));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.btn-action-edit:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+.btn-action-delete {
+  background: linear-gradient(135deg, var(--danger-color), #ff4757);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  transition: 0.2s;
+  margin-left: 10px;
+}
+
+.btn-action-delete:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+/* === Table Styling === */
+.table-custom {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  /* Spacing between rows */
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.table-custom thead th {
+  background-color: transparent;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  border: none;
+  padding: 1rem;
+}
+
+.table-custom tbody tr {
+  background-color: #ffffff;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 8px;
+}
+
+.table-custom tbody tr:hover {
+  transform: scale(1.01);
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+  position: relative;
+}
+
+.table-custom td {
+  padding: 1rem;
+  vertical-align: middle;
+  border-top: none;
+  border-bottom: none;
+  color: var(--text-main);
+}
+
+.table-custom td:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.table-custom td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* === Forms === */
+.form-label-custom {
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-control-custom {
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.form-control-custom:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.15);
+  background-color: #fff;
+}
+
+.invalid-feedback {
+  font-size: 0.85rem;
+  margin-top: 5px;
+  color: var(--danger-color);
+}
+
+/* === Footer === */
+.footer-custom {
+  background: #ffffff;
+  color: var(--text-secondary);
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: auto;
+}
